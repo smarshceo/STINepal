@@ -1,0 +1,251 @@
+.footer {
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-primary);
+}
+
+/* CTA Banner */
+.ctaBanner {
+  background: linear-gradient(135deg, var(--blue-primary), var(--blue-secondary));
+  padding: 48px 0;
+}
+
+.ctaContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.ctaTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.ctaSubtitle {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  color: var(--navy);
+  padding: 15px 32px;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.2);
+}
+
+/* Main Footer */
+.main {
+  padding: 72px 0 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoIcon {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, var(--blue-primary), var(--blue-secondary));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.logoText {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: white;
+}
+
+.logoText span {
+  color: var(--blue-accent);
+}
+
+.brandDesc {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  max-width: 280px;
+  color: rgba(255,255,255,0.55);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+}
+
+.contactItem a {
+  color: rgba(255,255,255,0.6);
+  transition: color 0.2s ease;
+}
+
+.contactItem a:hover {
+  color: var(--blue-accent);
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.social {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.6);
+  transition: all 0.25s ease;
+}
+
+.social:hover {
+  background: var(--blue-primary);
+  border-color: var(--blue-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Link Groups */
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.linkGroupTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.55);
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: white;
+}
+
+/* Trust Badges */
+.trustBadges {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.trustBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 7px 12px;
+  border-radius: 8px;
+}
+
+/* Bottom Bar */
+.bottomBar {
+  padding: 20px 0;
+  background: rgba(0,0,0,0.15);
+}
+
+.bottomContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.copyright {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.4);
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.bottomLink {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.4);
+  transition: color 0.2s ease;
+}
+
+.bottomLink:hover {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .brand { grid-column: span 2; }
+}
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+  .brand { grid-column: span 1; }
+  .ctaContent { flex-direction: column; }
+  .ctaBtn { width: 100%; justify-content: center; }
+  .main { padding: 48px 0 36px; }
+}

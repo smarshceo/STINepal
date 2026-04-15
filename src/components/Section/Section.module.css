@@ -1,0 +1,40 @@
+.section {
+  padding: 80px 24px 120px;
+  background: #ffffff;
+}
+
+.inner {
+  width: min(1040px, calc(100% - 48px));
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 0.95;
+  font-weight: 900;
+  color: #071a3a;
+}
+
+.description {
+  margin: 24px auto 0;
+  max-width: 760px;
+  color: #4f5b6b;
+  font-size: 1.08rem;
+  line-height: 1.9;
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 60px 18px 80px;
+  }
+
+  .title {
+    font-size: 2.6rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}

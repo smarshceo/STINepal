@@ -1,0 +1,235 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 18px 0;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 60px rgba(15, 30, 80, 0.08);
+}
+
+.inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+/* ── LEFT ── */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  text-decoration: none;
+  padding-right: 20px;
+}
+
+.logoText {
+  font-family: var(--font-primary);
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--navy);
+  letter-spacing: -0.03em;
+}
+
+.logoSub {
+  font-family: var(--font-primary);
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--blue-primary);
+  letter-spacing: -0.03em;
+}
+
+/* Divider */
+.divider {
+  width: 1.5px;
+  height: 32px;
+  background: rgba(15, 30, 72, 0.12);
+  flex-shrink: 0;
+}
+
+/* Search */
+.searchWrap {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: var(--radius-full);
+  padding: 8px 18px 8px 10px;
+  gap: 10px;
+  width: 280px;
+  border: 1px solid rgba(15, 30, 72, 0.12);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.searchWrap:focus-within {
+  border-color: var(--blue-accent);
+  transform: translateY(-1px);
+}
+
+.searchIconBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--yellow-accent);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.searchIconBtn:hover {
+  transform: scale(1.05);
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.95rem;
+  font-family: var(--font-primary);
+  color: var(--gray-800);
+}
+
+.searchInput::placeholder {
+  color: #8a9bb5;
+}
+
+/* ── RIGHT ── */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.navItem:hover {
+  color: var(--blue-primary);
+  background: rgba(30, 95, 168, 0.08);
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--blue-primary), var(--blue-secondary));
+  color: white;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  box-shadow: var(--shadow-blue);
+}
+
+.actionBtn:hover {
+  transform: translateY(-2px);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.offers {
+  color: #E86F3A;
+  font-weight: 600;
+}
+
+.offers:hover {
+  color: #c85a28;
+  background: #fff4ee;
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.menuToggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 900px) {
+  .searchWrap { width: 220px; }
+}
+
+@media (max-width: 768px) {
+  .header { padding: 12px 16px; }
+  .searchWrap { display: none; }
+  .actionBtn { display: none; }
+  .menuToggle { display: flex; }
+
+  .navLinks {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 18px 16px;
+    box-shadow: 0 12px 34px rgba(15, 30, 80, 0.14);
+    gap: 10px;
+  }
+
+  .navLinks.open { display: flex; }
+
+  .navItem {
+    width: 100%;
+    padding: 12px 16px;
+  }
+}

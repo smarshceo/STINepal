@@ -1,0 +1,216 @@
+.section {
+  padding: 100px 0;
+  background: white;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.header :global(.section-subtitle) {
+  margin: 0 auto;
+}
+
+.accent {
+  color: var(--blue-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+/* Card Base */
+.card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  padding: 32px 28px;
+  border: 1.5px solid var(--gray-100);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Popular */
+.popular {
+  border-color: var(--blue-primary);
+  box-shadow: var(--shadow-blue);
+  transform: scale(1.03);
+}
+
+.popular:hover {
+  transform: scale(1.03) translateY(-6px);
+}
+
+.popularBadge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--blue-primary), var(--blue-secondary));
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 5px 18px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  box-shadow: var(--shadow-blue);
+}
+
+/* Color Variants */
+.card_blue { background: var(--blue-soft); border-color: rgba(30,95,168,0.15); }
+.card_navy { background: var(--navy); border-color: var(--navy); }
+.card_teal { background: var(--teal-light); border-color: rgba(0,168,150,0.2); }
+
+.card_navy .pkgSubtitle,
+.card_navy .pkgName,
+.card_navy .price,
+.card_navy .testItem { color: white; }
+
+.card_navy .originalPrice { color: rgba(255,255,255,0.45); }
+.card_navy .checkIcon { color: var(--teal); }
+.card_navy .savings { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.8); }
+
+/* Card Top */
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pkgIcon {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.pkgSubtitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 3px;
+}
+
+.pkgName {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+/* Pricing */
+.pricing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--navy);
+  letter-spacing: -0.03em;
+}
+
+.originalPrice {
+  font-size: 1rem;
+  color: var(--gray-400);
+  text-decoration: line-through;
+}
+
+.savings {
+  background: var(--green-soft);
+  color: #1a9e6a;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+/* Tests List */
+.testList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.testItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--gray-700, #3a4a6b);
+}
+
+.checkIcon {
+  width: 20px;
+  height: 20px;
+  background: var(--green-soft);
+  color: var(--green-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* Book Button */
+.bookBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: var(--gray-50);
+  color: var(--navy);
+  border: 1.5px solid var(--gray-200);
+  transition: all 0.25s ease;
+}
+
+.bookBtn:hover {
+  background: var(--navy);
+  color: white;
+  border-color: var(--navy);
+  transform: translateY(-2px);
+}
+
+.bookBtnPrimary {
+  background: linear-gradient(135deg, var(--blue-primary), var(--blue-secondary));
+  color: white;
+  border: none;
+  box-shadow: var(--shadow-blue);
+}
+
+.bookBtnPrimary:hover {
+  background: linear-gradient(135deg, var(--blue-secondary), #3d8de6);
+  color: white;
+  box-shadow: 0 10px 28px rgba(30, 95, 168, 0.35);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+  .popular { transform: scale(1); }
+  .popular:hover { transform: translateY(-6px); }
+}
+
+@media (max-width: 600px) {
+  .section { padding: 60px 0; }
+}
