@@ -2,6 +2,7 @@
 
 import { useMemo, useState, type FormEvent } from 'react';
 import Navbar from '@/components/Navbar/Navbar';
+import Footer from '@/components/Footer/Footer';
 import Link from 'next/link';
 import styles from './page.module.css';
 
@@ -166,6 +167,7 @@ export default function TestServicesPage() {
           </section>
         </div>
       </main>
+      <Footer />
     </>
   );
 }
