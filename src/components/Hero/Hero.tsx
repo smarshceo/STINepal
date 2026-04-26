@@ -18,9 +18,9 @@ export default function Hero() {
             <a href="https://kafalcare.com/contact" className={styles.primaryBtn} id="hero-book-test">
               Book a Test
             </a>
-            <a href="https://kafalcare.com/sti" className={styles.secondaryBtn} id="hero-explore-services">
+            <Link href="/services" className={styles.secondaryBtn} id="hero-explore-services">
               Explore Services
-            </a>
+            </Link>
           </div>
 
           <div className={styles.trustRow}>
