@@ -66,6 +66,12 @@ export default function Footer() {
               <p className={styles.brandDesc}>
                 STI Nepal is a trusted preventive healthcare platform in Nepal. NABL-certified lab network, fast results, and 100% confidential testing.
               </p>
+              <div className={styles.partnerBadge}>
+                <span className={styles.partnerLabel}>Strategic Partner</span>
+                <a href="https://kafalcare.com" target="_blank" rel="noreferrer" className={styles.partnerLink}>
+                  KafalCare
+                </a>
+              </div>
               <div className={styles.contact}>
                 <div className={styles.contactItem}>
                   <span>✉️</span>
@@ -144,6 +150,15 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
+              
+              <div className={styles.linkGroup} style={{ marginTop: '24px' }}>
+                <h4 className={styles.linkGroupTitle}>Strategic Partner</h4>
+                <a href="https://kafalcare.com" target="_blank" rel="noreferrer" className={styles.partnerFooterLink}>
+                  <img src="/asset/removed_bg.png" alt="KafalCare" className={styles.partnerLogo} />
+                  <span className={styles.partnerName}>KafalCare</span>
+                </a>
+              </div>
+
               {/* Trust Badges */}
               <div className={styles.trustBadges}>
                 <div className={styles.trustBadge}>

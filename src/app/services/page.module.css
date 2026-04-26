@@ -1,0 +1,216 @@
+.page {
+  padding-top: 120px;
+  background-color: #f8fafd;
+  min-height: 100vh;
+}
+
+.hero {
+  padding: 80px 0 40px;
+  text-align: center;
+}
+
+.accent {
+  color: #0f4f91;
+}
+
+.gridSection {
+  padding: 40px 0 80px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 32px;
+}
+
+/* Card Styling */
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
+  border: 1px solid rgba(15, 79, 145, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(15, 30, 72, 0.08);
+  border-color: rgba(15, 79, 145, 0.2);
+}
+
+.popular {
+  border: 2px solid #0f4f91;
+  background: #fdfefe;
+}
+
+.popularBadge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0f4f91;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.category {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #526580;
+  letter-spacing: 0.05em;
+}
+
+.pkgName {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #102a43;
+  margin: 0;
+}
+
+.infoRow {
+  display: flex;
+  gap: 24px;
+  padding: 16px 0;
+  border-top: 1px solid #f1f4f8;
+  border-bottom: 1px solid #f1f4f8;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.infoLabel {
+  font-size: 0.7rem;
+  color: #526580;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f4f91;
+}
+
+.time {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #102a43;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #486581;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.testPreview {
+  background: #f7fafe;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.previewTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #102a43;
+}
+
+.testList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.testItem {
+  font-size: 0.85rem;
+  color: #526580;
+  display: flex;
+  gap: 8px;
+}
+
+.bullet {
+  color: #0f4f91;
+  font-weight: 900;
+}
+
+.viewDetails {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0f4f91;
+  transition: transform 0.2s;
+}
+
+.card:hover .viewDetails {
+  transform: translateX(4px);
+}
+
+/* CTA */
+.ctaSection {
+  padding-bottom: 100px;
+}
+
+.ctaBox {
+  background: linear-gradient(135deg, #0b1e3a, #162e55);
+  padding: 60px;
+  border-radius: 32px;
+  text-align: center;
+  color: white;
+}
+
+.ctaBox h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.ctaBox p {
+  opacity: 0.8;
+  margin-bottom: 32px;
+}
+
+.contactBtn {
+  display: inline-flex;
+  padding: 16px 40px;
+  background: white;
+  color: #0b1e3a;
+  border-radius: 100px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.contactBtn:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .ctaBox {
+    padding: 40px 24px;
+  }
+}

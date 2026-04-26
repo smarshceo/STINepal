@@ -1,0 +1,123 @@
+.section {
+  padding: 40px 0;
+  overflow: hidden;
+  background: white;
+  border-top: 1px solid rgba(15, 30, 72, 0.05);
+  border-bottom: 1px solid rgba(15, 30, 72, 0.05);
+}
+
+.marquee {
+  width: 100%;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  gap: 24px;
+  animation: scroll 80s linear infinite; /* Very slow as requested */
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pause on hover to allow users to read/click */
+.track:hover {
+  animation-play-state: paused;
+}
+
+.card {
+  width: 380px;
+  min-height: 300px;
+  background: #f8fafd;
+  padding: 40px;
+  border-radius: 32px;
+  text-decoration: none;
+  border: 1.5px solid #edf2f7;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  background: white;
+  border-color: #0f4f91;
+  box-shadow: 0 20px 48px rgba(15, 30, 72, 0.1);
+  transform: translateY(-8px);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 20px;
+}
+
+.category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #526580;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+.name {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #102a43;
+  margin: 0;
+}
+
+.testList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.testItem {
+  font-size: 0.85rem;
+  color: #486581;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  color: #0f4f91;
+  font-weight: 900;
+}
+
+.pkgMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(15, 79, 145, 0.05);
+}
+
+.price {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f4f91;
+  margin: 0;
+}
+
+.arrow {
+  color: #0f4f91;
+  font-weight: 900;
+  font-size: 1.25rem;
+  transition: transform 0.2s;
+}
+
+.card:hover .arrow {
+  transform: translateX(6px);
+}
+

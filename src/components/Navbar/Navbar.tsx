@@ -28,11 +28,11 @@ export default function Navbar() {
 
         <div className={styles.right}>
           <nav className={`${styles.navLinks} ${menuOpen ? styles.open : ''}`}>
-            <a href="https://kafalcare.com/sti" className={styles.navItem} id="nav-services">
+            <Link href="/services" className={styles.navItem} id="nav-services">
               Services
-            </a>
+            </Link>
             <Link href="/symptoms" className={styles.navItem} id="nav-symptoms">
-              Symptoms
+              Symptom Checker
             </Link>
             <a href="https://kafalcare.com/blog" className={styles.navItem} id="nav-blog">
               Blog
@@ -46,14 +46,6 @@ export default function Navbar() {
             <a href="https://kafalcare.com/sti" className={styles.navItem} id="nav-cost">
               Cost
             </a>
-            <div className={styles.dropdown}>
-              <Link href="/test-services" className={styles.navItem} id="nav-test-services">
-                Test Services
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </Link>
-            </div>
             <a href="https://kafalcare.com/membership" className={`${styles.navItem} ${styles.offers}`} id="nav-offers">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M18 8h1a4 4 0 0 1 0 8h-1" /><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />

@@ -87,24 +87,165 @@
   color: #102a43;
 }
 
-.noteSection {
-  margin-top: 42px;
-  padding: 32px 36px;
+/* Stepwise Form Styles */
+.stepContainer {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.quizHeader, .resultsHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.quizHeader h2, .resultsHeader h2 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.quizHeader p, .resultsHeader p {
+  color: #526580;
+  font-size: 1.1rem;
+}
+
+.optionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.optionBtn {
+  padding: 30px 20px;
+  border-radius: 24px;
+  background: white;
+  border: 2px solid transparent;
+  box-shadow: var(--shadow-md);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #102a43;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.optionBtn:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(15, 79, 145, 0.3);
+}
+
+.optionBtn.selected {
+  background: #0f4f91;
+  color: white;
+  border-color: #0f4f91;
+}
+
+.questionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.questionCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 24px;
+  border-radius: 24px;
+  background: white;
+  border: 2px solid transparent;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  font-weight: 600;
+  color: #102a43;
+  transition: all 0.2s ease;
+}
+
+.questionCard:hover {
+  border-color: rgba(15, 79, 145, 0.2);
+}
+
+.questionCard.active {
+  background: #f0f7ff;
+  border-color: #0f4f91;
+}
+
+.questionCard input {
+  width: 20px;
+  height: 20px;
+}
+
+.formActions, .resultActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.backBtn, .secondaryBtn {
+  background: transparent;
+  border: 1px solid #0f4f91;
+  color: #0f4f91;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.backBtn:hover, .secondaryBtn:hover {
+  background: rgba(15, 79, 145, 0.05);
+}
+
+.resultGrid {
+  display: grid;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.resultCard {
+  padding: 32px;
   border-radius: 28px;
   background: white;
   border: 1px solid rgba(15, 30, 72, 0.08);
+  box-shadow: var(--shadow-md);
 }
 
-.noteSection h2 {
-  font-size: 1.8rem;
+.resultCard h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #0f4f91;
+}
+
+.resultCard p {
+  line-height: 1.8;
+  color: #526580;
   margin-bottom: 16px;
 }
 
-.noteSection p {
-  margin: 0;
-  color: #526580;
-  line-height: 1.75;
-  font-size: 1rem;
+.matchScore {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #f0f7ff;
+  color: #0f4f91;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.noMatch {
+  text-align: center;
+  padding: 60px 40px;
+  background: white;
+  border-radius: 32px;
+  box-shadow: var(--shadow-md);
 }
 
 @media (max-width: 1024px) {
@@ -113,26 +254,25 @@
     text-align: center;
   }
 
-  .grid {
+  .grid, .questionGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 700px) {
   .page {
-    padding: 80px 16px 60px;
+    padding: 120px 16px 60px;
   }
 
-  .hero {
-    padding: 28px;
-  }
-
-  .grid {
+  .grid, .questionGrid, .optionGrid {
     grid-template-columns: 1fr;
   }
-
-  .listSection h2,
-  .noteSection h2 {
-    font-size: 1.6rem;
+  
+  .formActions {
+    flex-direction: column-reverse;
+  }
+  
+  .formActions button, .formActions a {
+    width: 100%;
   }
 }

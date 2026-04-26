@@ -8,10 +8,10 @@ export default function Hero() {
         <div className={styles.content}>
           <h1 className={styles.title}>STI Nepal</h1>
           <p className={styles.subtitle}>
-            Confidential health screenings, lab tests, and home collection with complete privacy.
+            Confidential STI & STD Screenings — Powered by KafalCare.
           </p>
           <p className={styles.description}>
-            Book trusted tests, schedule home collection, and receive fast verified reports from NABL-certified labs across Nepal.
+            Nepal's most trusted platform for private screenings. Book your STI or STD panel today and get fast, verified reports from NABL-certified labs with 100% confidentiality.
           </p>
 
           <div className={styles.actions}>

@@ -104,6 +104,64 @@
   color: rgba(255,255,255,0.55);
 }
 
+.partnerBadge {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: -8px;
+}
+
+.partnerLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.4);
+  font-weight: 600;
+}
+
+.partnerLink {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blue-accent);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.partnerLink:hover {
+  opacity: 0.8;
+}
+
+.partnerLogo {
+  height: 60px;
+  width: auto;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  display: block;
+  object-fit: contain;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.partnerName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.01em;
+}
+
+.partnerLogo:hover {
+  transform: scale(1.05);
+}
+
+.partnerFooterLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  text-decoration: none;
+}
+
 .contact {
   display: flex;
   flex-direction: column;

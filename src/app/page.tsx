@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar/Navbar';
 import Hero from '@/components/Hero/Hero';
 import Features from '@/components/Features/Features';
+import ServiceMarquee from '@/components/ServiceMarquee/ServiceMarquee';
 import Section from '@/components/Section/Section';
 import Commitment from '@/components/Commitment/Commitment';
 import Partnership from '@/components/Partnership/Partnership';
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Features />
+      <ServiceMarquee />
       <Section />
       <Commitment />
       <Partnership />
